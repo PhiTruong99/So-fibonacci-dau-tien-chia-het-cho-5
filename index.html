@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Số đầu tiên fibonacci chia 5</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var n;
+            var f0=0, f1=1, fn;
+            n = parseInt(prompt("Nhập số n: "));
+            for(var i=0;i<=n;i++){
+                if(i<2){
+                    if(i%5==0){
+                        document.write(i," là số đầu tiên fibonacci chia hết cho 5");
+                        break;
+                    }
+                }else{
+                    fn=f0+f1;
+                    f0=f1;
+                    f1=fn;
+                    if(fn%5==0){
+                        document.write(fn," là số đầu tiên fibonacci chia hết cho 5");
+                    }
+            }
+            }
+        </script>
+    </body>
+</html>
